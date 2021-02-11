@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nEMMCdMtYEVoxOYhDMePDX/yPxhkvm9fw3uJImDe9iYTrxXjGXm68W/JM+nS8rtzivq8r72gi08t/aAhV1L+gw==",
+  "dgSpecHash": "rRplPLdhBPnf6cfMg4Vj/RYTnetQqi/oH0sprRfnQgmhbVXto8PqEGzqDs58pYrsBtNS6DrOatRkZUbop+q+CA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nuno\\source\\repos\\APIMares\\APIMares\\APIMares.csproj",
+  "projectFilePath": "C:\\daw_api_rep\\Daw_api\\APIMares\\APIMares\\APIMares.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nuno\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Nuno\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

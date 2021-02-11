@@ -106,8 +106,8 @@ namespace APIMares.Controllers
 
         //controlador da pesquisa de praias pelo concelho
         //get: api/tides/makebeach/1
-        [HttpGet("getCounty/county={county}")]
-        public async Task<ActionResult<List<Beach>>> getCounty(int county)
+        [HttpGet("getBeaches/county={county}")]
+        public async Task<ActionResult<List<Beach>>> getBeaches(int county)
         {
             List<Beach> beaches = await _context.Beaches.Where(c => c.CountyId == county).ToListAsync();
             if (beaches.Count() > 0)
@@ -121,8 +121,8 @@ namespace APIMares.Controllers
         }
 
         ////GET: api/Tides/makeTide/1
-        //[HttpGet("getBeach/beach={beach}")]
-        //public async Task<ActionResult<List<Tide>>> getBeach(int beach)
+        //[HttpGet("getTides/beach={beach}")]
+        //public async Task<ActionResult<List<Tide>>> getTides(int beach)
         //{
         //    List<Tide> tides = await _context.Tides.Where(c => c.BeachId == beach).ToListAsync();
         //    if (tides.Count() > 0)

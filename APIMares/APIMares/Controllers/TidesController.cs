@@ -108,11 +108,11 @@ namespace APIMares.Controllers
         }
 
         //comando para dar permissão ao admin de aceder a esta chamada de metodo
-        [Authorize(Roles = UserRoles.Admin)]
+        //[Authorize(Roles = UserRoles.Admin)]
         // Controlador da pesquisa da praia através do conselho
         //GET: api/Tides/makeTide/1
-        [HttpGet("getBeach/beach={beach}")]
-        public async Task<ActionResult<List<Tide>>> GetBeach(int beach)
+        [HttpGet("getTide/beach={beach}")]
+        public async Task<ActionResult<List<Tide>>> getTide(int beach)
         {
             List<Tide> tides = await _context.Tides.Where(c => c.BeachId == beach).ToListAsync();
             if (tides.Count() > 0)
@@ -127,15 +127,15 @@ namespace APIMares.Controllers
 
         //GET: api/Tides/getDay/1
         [HttpGet("getDay/day={day}")]
-        public async Task<ActionResult<List<Tide>>> GetDay(DateTime day) 
+        public async Task<ActionResult<List<Tide>>> GetDay(DateTime day)
         {
             List<Tide> tides = await _context.Tides.Where(c => c.Day == day).ToListAsync();
             if (tides.Count() > 0)
             {
                 return tides;
             }
-            else {
-
+            else
+            {
                 return NotFound();
             }
         }

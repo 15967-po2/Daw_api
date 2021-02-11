@@ -15,6 +15,5 @@ namespace MaresAPI.Models
         public int BeachId { get; set; }
 
         public virtual Beach Beach { get; set; }
-        public int CountyId { get; internal set; }
     }
 }
