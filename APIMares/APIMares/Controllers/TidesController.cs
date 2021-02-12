@@ -126,10 +126,10 @@ namespace APIMares.Controllers
 
 
         //GET: api/Tides/getDay/1
-        [HttpGet("getDay/day={day}")]
-        public async Task<ActionResult<List<Tide>>> GetDay(DateTime day)
+        [HttpGet("getDay/beach={beach}/day={day}")]
+        public async Task<ActionResult<List<Tide>>> GetDay(int beach, DateTime day)
         {
-            List<Tide> tides = await _context.Tides.Where(c => c.Day == day).ToListAsync();
+            List<Tide> tides = await _context.Tides.Where(c => c.Day == day).Where(c => c.BeachId == beach).ToListAsync();
             if (tides.Count() > 0)
             {
                 return tides;
